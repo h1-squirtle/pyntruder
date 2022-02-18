@@ -1,5 +1,5 @@
 # pyntruder
-Low level Burp Intruder via python
+Low level Burp Intruder via python. The tool will send given number of concurrent requests to given URL.  
 
 Usage:
 -----
