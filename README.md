@@ -62,7 +62,21 @@ Session Expired. Status code: 401
 30 requests sent in  0.709497 seconds.
 Please check into an application for better results.
 ```
+### Bad request:
+root@root$ python pyndruder.py request.txt
+>>
+Attack Started, please wait..
 
+Requests passed:
+-----------------------------------
+Bad Request: 400 | Please check the request.
+Bad Request: 400 | Please check the request.
+Bad Request: 400 | Please check the request.
+Bad Request: 400 | Please check the request.
+......
+
+30 requests sent in  1.510456 seconds.
+Please check into application for better results.
 
 Note:
 ---------
