@@ -13,19 +13,12 @@ data=parse(data)
 data="response="+data
 
 #To remove ssl warnings
-if "urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)" in data:
-    pass
-else:
-    warning="import urllib3,requests\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\n"
-    data=warning+data
+warning="import urllib3,requests\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\n"
+data=warning+data
 
 #To filter successful requests
-ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status.code==500:\n      print('Session Expired. Status code:',response.status_code)"
-
-if "response.status_code" in data:
-    pass
-else:
-    data=data+ifLoopAdd
+ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status_code==500:\n      print('Session Expired. Status code:',response_status_code)\nelse:\n    print('Status code:',response.status_code)\n"
+data=data+ifLoopAdd
 
 def visit():
     exec(data)
@@ -34,13 +27,15 @@ print("Requests passed:\n-----------------------------")
 before=perf_counter()
 
 #Change number of request as per requirment
-NumberOfRequests=30
+numberOfRequests=30
 conRequests=60
 with ThreadPoolExecutor(max_workers=conRequests) as executor:
-    x=0
-    while x <=NumberOfRequests :
-        executor.submit(visit)
+    x=1
+    while x<=numberOfRequests :
         x += 1
+        executor.submit(visit)
+
+
 after=perf_counter()
 
-print(f"\n{NumberOfRequests} requests sent in {after-before: 3f} seconds.\nPlease check into application for better results.")
+print(f"\n{numberOfRequests} requests sent in {after-before: 3f} seconds.\nPlease check into application for better results.")
