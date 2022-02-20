@@ -4,6 +4,7 @@ from sys import argv
 import urllib3
 import requests
 
+print("\nAttack Started, please wait\n.......")
 with open(argv[1],"r") as f:
     data=f.read()
 
