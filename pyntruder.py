@@ -29,11 +29,12 @@ before=perf_counter()
 
 #Change number of request as per requirment
 NumberOfRequests=30
-with cp.ThreadPoolExecutor(max_workers=60) as executor:
+conRequests=60
+with cp.ThreadPoolExecutor(max_workers=conRequests) as executor:
     x=0
     while x <=NumberOfRequests :
         executor.submit(visit)
         x += 1
 after=perf_counter()
 
-print(f"\nAttack completed in {after-before: 3f} seconds.\nPlease check into application for better results.")
+print(f"\n{NumberOfRequests} requests sent in {after-before: 3f} seconds.\nPlease check into application for better results.")
