@@ -28,7 +28,7 @@ before=perf_counter()
 
 #Change number of request as per requirment
 numberOfRequests=30
-conRequests=100
+conRequests=80
 with ThreadPoolExecutor(max_workers=conRequests) as executor:
     x=1
     while x<=numberOfRequests :
