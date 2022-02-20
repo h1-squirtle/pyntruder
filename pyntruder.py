@@ -17,7 +17,7 @@ warning="import urllib3,requests\nurllib3.disable_warnings(urllib3.exceptions.In
 data=warning+data
 
 #To filter successful requests
-ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status_code==500:\n      print('Session Expired. Status code:',response_status_code)\nelse:\n    print('Status code:',response.status_code)\n"
+ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status_code==500:\n      print('Session Expired. Status code:',response_status_code)\nelse:\n    print('Bad Request:',response.status_code,'| Please check the request.')\n"
 data=data+ifLoopAdd
 
 def visit():
@@ -34,8 +34,6 @@ with ThreadPoolExecutor(max_workers=conRequests) as executor:
     while x<=numberOfRequests :
         x += 1
         executor.submit(visit)
-
-
 after=perf_counter()
 
 print(f"\n{numberOfRequests} requests sent in {after-before: 3f} seconds.\nPlease check into application for better results.")
