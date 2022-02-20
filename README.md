@@ -1,17 +1,17 @@
 # pyntruder
-A basic Intruder via python to test **race condition attacks** without BurpSuite Intruder. This tool will send multiple concurrent requests with multiple threads mimicking the Burp Intruder "Null Payloads". 
+A basic Intruder via python to test _**race condition attacks**_ without BurpSuite Intruder. This tool will send multiple concurrent requests with multiple threads mimicking the Burp Intruder _"Null Payloads"._
 
-**If you want to:*
-- Change the default number of requests to send by changing value of *"NumberOfRequests"* parameter **[Default value=30]**
-- Change the default number of concurrent requests by changing value of *"conRequests"* parameter **[Default value=60]**
+**If you want to:**
+- Change the number of requests to send by changing value of *"NumberOfRequests"* parameter **[Default value=30]**
+- Change the number of concurrent requests by changing value of *"conRequests"* parameter **[Default value=60]**
 
 Instructions:
 ---
 1. Login into the application and open the network tab
 2. Perform the action.
-3. Copy the cURL request of that action with "Right Click>>Copy>>Copy as a cURL (bash)
+3. Copy the cURL request of that action with _"Right Click>>Copy>>Copy as a cURL (bash)"_
 4. Create a new txt file and paste the cURL request in that file. 
-5. Change the parameter value which you want to test for a race condition. (Values of parameters in copied cURL request have already been processed. 
+5. Change the parameter value which you want to test for a race condition. (Values of parameters in copied cURL request have already been processed.) 
 7. Run the tool with the following syntax
 ```
 python pyndruder.py <file-containing-curl-request>
@@ -26,7 +26,7 @@ Usage:
 python pyndruder.py <file-containing-cURL-request>
 python pyndruder.py request.txt
 ```
-Output:
+Expected Output:
 --
 ### Successful requests:
 
