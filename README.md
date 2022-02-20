@@ -1,5 +1,5 @@
 # pyntruder
-A Low level Burp Intruder via python to test race condition issues without BurpSuite Intruder. This tool will send multiple concurrent requests with multiple threads mimicing the Burp Intruder "Null Payload". 
+A basic Intruder via python to test race condition issues without BurpSuite Intruder. This tool will send multiple concurrent requests with multiple threads mimicing the Burp Intruder "Null Payloads". 
 
 **If you want to:**
 - Change the default number of requests to send by changing value of *"NumberOfRequests"* parameter **[Default value=30]**
