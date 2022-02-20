@@ -1,12 +1,16 @@
 import concurrent.futures as cp
 from time import perf_counter
 from sys import argv
-import urllib3
-import requests
+import uncurl
 
-print("\nAttack Started, please wait\n.......")
+print("Attack Started, please wait..\n")
+
 with open(argv[1],"r") as f:
     data=f.read()
+data=data.replace("$","")
+data=data.replace("\\","")
+data=uncurl.parse(data)
+data="response="+data
 
 #To remove ssl warnings
 if "urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)" in data:
@@ -22,9 +26,11 @@ if "response.status_code" in data:
     pass
 else:
     data=data+ifLoopAdd
+
 def visit():
     exec(data)
 
+print("Requests passed:\n-----------------------------")
 before=perf_counter()
 
 #Change number of request as per requirment
