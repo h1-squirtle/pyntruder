@@ -1,8 +1,7 @@
 # pyntruder
 A Low level Burp Intruder via python. This tool will let you send concurrent requests with multiple threads mimicing the Burp Intruder. 
-Default total requests will be sent = 30
-Default concurrent requests (threads) = 60
 
+If you want to:
 - Change the default "Total requests to send" by changing value of *"NumberOfRequests"* parameter  **[Default value=30]**
 - Change the default "concurrent requests" by changing value of *"conRequests"* parameter          **[Default value=60]**
 
