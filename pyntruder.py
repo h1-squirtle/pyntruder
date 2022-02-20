@@ -20,7 +20,7 @@ else:
     data=warning+data
 
 #To filter successful requests
-ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status.code==500:\n      print('Session Expired. Status code',response.status_code)"
+ifLoopAdd="\nif response.status_code==200 or response.status_code==201: \n     print('A request passed:' ,response.status_code)\nelif response.status_code==401 or response.status.code==500:\n      print('Session Expired. Status code:',response.status_code)"
 
 if "response.status_code" in data:
     pass
