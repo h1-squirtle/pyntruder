@@ -59,10 +59,12 @@ Session Expired. Status code: 401
 Session Expired. Status code: 401
 Session Expired. Status code: 401
 .......
+
 30 requests sent in  0.709497 seconds.
 Please check into an application for better results.
 ```
 ### Bad request:
+```
 root@root$ python pyndruder.py request.txt
 >>
 Attack Started, please wait..
@@ -77,7 +79,7 @@ Bad Request: 400 | Please check the request.
 
 30 requests sent in  1.510456 seconds.
 Please check into application for better results.
-
+```
 Note:
 ---------
 Remember to change the value of the parameter you want to check race condition on. The cURL request you copied contains a value of which entry is already created. 
