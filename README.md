@@ -3,7 +3,7 @@ A basic python tool to test _**RACE CONDITION ATTACKS**_ without BurpSuite Intru
 
 **If you want to:**
 - Change the number of requests to send by changing value of *"NumberOfRequests"* parameter **[Default value=30]**
-- Change the number of concurrent requests (threads) by changing value of *"conRequests"* parameter **[Default value=100]**
+- Change the number of concurrent requests (threads) by changing value of *"conRequests"* parameter **[Default value=80]**
 
 Instructions:
 ---
