@@ -7,7 +7,7 @@ A basic python tool to test _**RACE CONDITION ATTACKS**_ without BurpSuite Intru
 
 Instructions:
 ---
-1. Login into the application and open the network tab
+1. Login into the application and open the network tab in chrome.
 2. Perform the action.
 3. Copy the cURL request of that action with _"Right Click>>Copy>>Copy as a cURL (bash)"_
 4. Create a new txt file and paste the cURL request in that file. 
