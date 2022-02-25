@@ -71,4 +71,7 @@ Please check into an application for better results.
 
 Note:
 ---------
-Remember to change the value of the parameter you want to check race condition on. The cURL request you copied contains a value of which entry is already created. 
+- Remember to change the value of the parameter you want to check race condition on. The cURL request you copied contains a value of which entry is already created. 
+- multipart requests are currently not supported.
+
+
